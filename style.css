@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(to bottom right, #fceff9, #e8f0ff);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f9d5ec, #dbeafe);
+}
+
+.name {
+  font-family: 'Playfair Display', cursive;
+  font-size: 2em;
+  color: #b76e79;
+}
+
+.timeline .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.note, .wishes, .surprise, .closing {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #b76e79;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a05c66;
+}
+
+.hidden {
+  display: none;
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+.surprise button:hover {
+  background-color: #e85c72;
+  box-shadow: 0 0 15px #ffb6c1;
+  transform: scale(1.05);
+}
+#birthdayFloatMessage {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-family: 'Playfair Display', cursive;
+  color: #ff6b81;
+  opacity: 0;
+  transition: opacity 2s ease;
+  text-shadow: 0 0 15px #ffc0cb;
+  z-index: 1000;
+}
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  font-size: 2em;
+  color: #ff6b81;
+  animation: floatUp 4s ease-in forwards;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
